@@ -4,10 +4,30 @@
     "version": "1.0",
     "browser_action": {
       "default_icon": "icon.png",
-      "default_popup": "popup.html"
+      "default_popup": "popup.html",
+      "default_title": "Remove spam"
+    },
+    "background": {
+      "page": "background.html",
+      "persistent": true
     },
     "permissions": [
       "http://api.giphy.com/"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://www.facebook.com/*"
+            ],
+            "js": [
+                "scripts/content.js"
+            ],
+            "css": [
+                "styles/font.css",
+                "styles/main.css"
+            ],
+            "run_at": "document_idle"
+        }
     ],
     "manifest_version": 2
   }
