@@ -1,0 +1,13 @@
+{
+    "name": "fb-extension",
+    "description": "Thu thập và loại bỏ spam facebook",
+    "version": "1.0",
+    "browser_action": {
+      "default_icon": "icon.png",
+      "default_popup": "popup.html"
+    },
+    "permissions": [
+      "http://api.giphy.com/"
+    ],
+    "manifest_version": 2
+  }
